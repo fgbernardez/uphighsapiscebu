@@ -38,13 +38,13 @@ class GradeController extends MainController{
         );
 
         $input_sy = $this->input->post();
-        if( isset($input_sy["quarter_first"]) && ($input_sy["quarter_first"] < 69 || $input_sy["quarter_first"] > 100)){
+        if( isset($input_sy["quarter_first"]) && ($input_sy["quarter_first"] < 65 || $input_sy["quarter_first"] > 100)){
             $this->returnJson($invalidInputGradeResponse);
-        } else if( isset( $input_sy["quarter_second"] )  && ($input_sy["quarter_second"] < 69 || $input_sy["quarter_second"] > 100)){
+        } else if( isset( $input_sy["quarter_second"] )  && ($input_sy["quarter_second"] < 65 || $input_sy["quarter_second"] > 100)){
             $this->returnJson($invalidInputGradeResponse);
-        } else if( isset( $input_sy["quarter_third"] )  && ($input_sy["quarter_third"] < 69 || $input_sy["quarter_third"] > 100)){
+        } else if( isset( $input_sy["quarter_third"] )  && ($input_sy["quarter_third"] < 65 || $input_sy["quarter_third"] > 100)){
             $this->returnJson($invalidInputGradeResponse);
-        } else if( isset( $input_sy["quarter_fourth"] ) && ($input_sy["quarter_fourth"] < 69 || $input_sy["quarter_fourth"] > 100)){
+        } else if( isset( $input_sy["quarter_fourth"] ) && ($input_sy["quarter_fourth"] < 65 || $input_sy["quarter_fourth"] > 100)){
             $this->returnJson($invalidInputGradeResponse);
         } else {
             $this->response = $this->gradeModule->updateGrade( $input_sy  );

@@ -34,7 +34,7 @@ class GradeModel extends CI_Model{
                 break;
 
             case "quarter_second":
-                $grade_udpate   = "secong grading";
+                $grade_udpate   = "second grading";
                 break;
                 
             case "quarter_third":
@@ -50,7 +50,7 @@ class GradeModel extends CI_Model{
                 break;
 
             case 2:
-                $grade_udpate   = "secong grading";
+                $grade_udpate   = "second grading";
                 break;
                 
             case 3:
