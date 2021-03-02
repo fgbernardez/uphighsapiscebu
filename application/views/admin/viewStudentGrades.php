@@ -250,7 +250,6 @@ if (isset($attCal) && $attCal){
 
 <?php } ?>
 
-
 <div class="content-wrapper">
     <!-- Main content -->
     <section class="content">
@@ -280,12 +279,12 @@ if (isset($attCal) && $attCal){
                 </div>
                 <div class="content_view">
                     <div class="row">
-
-                        
                         <div class="col col-md-5 col-md-offset-4 data_right student-data">
                             <h5 style="font-weight: bold; color: #751517;">REPORT CARD</h5>
                             <p>School Year: <span><?php echo $sy_data["start_year"] . "-" . $sy_data["end_year"]; ?></span></p>
-                            <p>Grade: <span  style="margin-right: 20px;"><?php echo $std_grade_level; ?></span>    Section: <span><?php echo $section; ?></span></p>
+                            <p>
+                            Grade: <span  style="margin-right: 20px;"><?php echo $std_grade_level; ?></span>
+                            Section: <span><?php echo $section; ?></span></p>
                             <p>Age: <span style="margin-right: 20px;"><?php echo $std["age"]; ?></span>Gender: <span><?php echo $std["gender"]; ?></span></p>
                             <p>LRN: <span><?php echo $std["lrn"]; ?></span></p>
                         </div>
@@ -294,7 +293,7 @@ if (isset($attCal) && $attCal){
                             <p>Student No: <span><?php echo $std["student_no"]; ?></span></p>
                         </div>
                         <div class="col col-md-6" style="display: inline-block;">
-                            <p>Name: <span><?php echo $std["first_name"].' '.$std["last_name"]; ?></span> </p>
+                            <p>Name: <span><?php echo $std["first_name"].' '.$std["middle_name"].' '. $std["last_name"]; ?></span> </p>
                         </div>
                         <div class="clearfix"></div>
 
@@ -569,24 +568,72 @@ if (isset($attCal) && $attCal){
 
                     </div>
                 </div>
-                <div class="ftr_view">
+            <div class="ftr_view">
+                    <div class="ftr_content_view">
+                        <h4>CERTIFICATE OF ADMISSION/TRANSFER</h4>
+                        <table>
+                            <tr>
+                                <td>Eligible for admission/transfer to ______________________</td>
+                                <td>Parent's Signature:________________________</td>
+                                <td>
+                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-decoration: underline; font-weight: 600; color: #751517 !important; text-transform: uppercase;">  <?php echo $principalData["first_name"] . ' '.$principalData["last_name"]; ?></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lacks credit/s in ______________________</td>
+                                <td>Date issued: <span style="font-weight: 600; text-decoration:underline; color: #751517 !important;"><?php echo date('m/d/Y'); ?> </span>
+                                </td>
+                                <td>
+                                    <p style = "text-align:center;"> <small style = "font-weight: 500;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Principal</small> </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> &nbsp; </td>
+                                <td> &nbsp; </td>
+                            </tr>
+                            <tr>
+                                <td colspan = "3" rowspan="5">
+                                    <p style="margin-top: -10px; font-weight: 500; color: #751517 !important; font-size:11px;"> <img src="http://uphscebugradingsystem.com/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- <div class="data_left">
+                            <p style="margin-top: 10px;">Eligible for admission/transfer to ______________________</p>
+							<p style="margin-top: 10px;">Lacks credit/s in ______________________</p>
+                        </div>
+						<div class="data_center">
+							<p style="margin-top: 10px;">Parent's Signature:________________________</p>
+							<p style="margin-top: 10px;">Date issued: <span style="font-weight: 600; color: #751517 !important;"><?php echo date('m/d/Y'); ?></p>
+						</div>
+						<div class="data_right" style="margin-top: 30px;">
+							<p><span style="font-weight: 600; color: #751517 !important; text-transform: uppercase;"> <?php echo $principalData["first_name"] . ' '.$principalData["last_name"]; ?></span> <small style = "font-weight: 500;">Principal</small> </p>
+						</div>
+						<div class = "data_left">
+    						<p style="margin-top: -10px; font-weight: 500; color: #751517 !important; font-size:11px;"> <img src="http://uphscebugradingsystem.com/assets/custom/images/Digital_Final.png" style="width:25px;width:25px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
+                        </div>
+                        --> 
+                    </div>
+                </div>
+            <!--<div class="ftr_view">
                     <div class="ftr_content_view">
                         <h4>CERTIFICATE OF ADMISSION/TRANSFER</h4>
                         <div class="data_left">
-                            <p style="margin-top: 5px;">Eligible for admission/transfer to ___________________________</p>
-							<p style="margin-top: 5px;">Lacks credit/s in ____________________________</p>
-							<p style="margin-top: 5px;">Date issued: <span style="font-weight: 600; color: #751517 !important;"><?php echo date('m/d/Y'); ?></p>
-							<p><span style="margin-top: 20px; font-weight: 500; color: #751517 !important;"> <img src="http://uphscebugradingsystem.com/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</span> </p> 
+                            <p style="margin-top: 10px;">Eligible for admission/transfer to _________________</p>
+							<p style="margin-top: 10px;">Lacks credit/s in _________________</p>
                         </div>
 						<div class="data_center">
-							<p style="margin-top: 10px;">Parent's Signature:___________________________</p>	
-							<p><span style="font-weight: 500; color: #751517 !important; text-transform: uppercase;"> <?php echo $principalData["first_name"] . ' '.$principalData["last_name"]; ?></span><small style = font-weight: 500; color: color: #751517 !important;">Principal</small></p>
+							<p style="margin-top: 10px;">Parent's Signature:_________________</p>
+							<p style="margin-top: 10px;">Date issued: <span style="font-weight: 600; color: #751517 !important;"><?php echo date('m/d/Y'); ?></p>
 						</div>
- 
-                            <!--<p><span style="margin-top: 20px; font-weight: 500; color: #751517 !important;"> <img src="http://uphscebugradingsystem.com/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</span> </p> -->
+						<<div class="data_right" style="margin-top: 10px;">
+							<p><span style="font-weight: 600; color: #751517 !important; text-transform: uppercase;"> <?php echo $principalData["first_name"] . ' '.$principalData["last_name"]; ?></span> <small style = "font-weight: 500;">Principal</small> </p>
+						</div>
+						<div class="data_left">
+    						<p style="margin-top: 10px; font-weight: 500; color: #751517 !important;"> <img src="http://uphscebugradingsystem.com/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
             <div class="clearfix"></div>
         </div>
             

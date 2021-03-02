@@ -37,7 +37,7 @@
                     <tbody>
                         <tr>
                             <th>Description</th>
-                            <th>Date and Time</th>
+                            <th>Date Time</th>
                         </tr>
 
                         <?php

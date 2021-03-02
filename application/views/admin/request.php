@@ -31,8 +31,7 @@
                         <div class="box-header">
                             <h3 class="box-title">All Request</h3>
 
-                        <!-- I edited here -->
-                        <div class="box-tools">
+                            <!-- <div class="box-tools">
                                 <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
                                 <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
@@ -40,7 +39,7 @@
                                     <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                                 </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body table-responsive no-padding">
@@ -129,7 +128,7 @@
                 </div>
             <!-- /.box-body -->
             </div>
-            <!-- /Default box  -->
+            <!-- /.box -->
     </section>
     <!-- /.content -->
 </div>
@@ -161,16 +160,15 @@
                     </select>
                    
                 </div>
-                <!-- I edited here -->
-                 <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Submit Date:</label>
                     <div class="input-group date">
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
                         <input type="text" class="form-control pull-right" id="datepicker " name="date_to_submit">
-                    </div> 
-                </div>
+                    </div>
+                </div> -->
 
                 <div class="form-group">
                     <label>Date:</label>

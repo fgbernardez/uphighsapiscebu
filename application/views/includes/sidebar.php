@@ -79,7 +79,7 @@
         
         <li <?php if( $this->uri->segment(1) == "request" ){ echo "class='active'"; } ?>>
           <a href="<?php echo base_url("request");  ?>">
-            <i class="fa fa-bookmark-o"></i> <span>Request</span>
+            <i class="fa fa-bookmark-o"></i> <span>Summary of Requests</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red"><?php if( $pending_request >= 1 ) { echo $pending_request; } ?></small>
             </span>
@@ -128,7 +128,7 @@
 
         <li <?php if( $this->uri->segment(2) == "request" ){ echo "class='active'"; } ?>>
           <a href="<?php echo base_url("admin/request");  ?>">
-            <i class="fa fa-bookmark-o"></i> <span>Request</span>
+            <i class="fa fa-bookmark-o"></i> <span>Summary of Requests</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red"><?php if( $pending_request >= 1 ) { echo $pending_request; } ?></small>
             </span>

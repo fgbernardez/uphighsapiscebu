@@ -153,7 +153,7 @@ table.dataTable{ font-size: 15px !important; }
                             <tr>
                                 <td><?php echo $std->lrn; ?></td>
                                 <td><?php echo $std->student_no; ?></td>
-                                <td><?php echo $std->first_name.' '.$std->last_name; ?></td>
+                                <td><?php echo $std->first_name.' '.$std->middle_name.' '.$std->last_name; ?></td>
                                 <td><?php echo $std->birthdate; ?></td>
                                 <td><?php echo $std->age; ?></td>
                                 <td><?php echo $std->gender; ?></td>
@@ -228,6 +228,10 @@ table.dataTable{ font-size: 15px !important; }
                         <label for="">First name: </label>
                         <input type="text" class="form-control" id="" name="first_name" placeholder="Enter name" required>
                     </div>
+                    <div class="form-group">
+                        <label for="">Midlle name: </label>
+                        <input type="text" class="form-control" id="" name="middle_name" placeholder="Enter name" required>
+                    </div>
 					<div class="form-group">
                         <label for="">Last name: </label>
                         <input type="text" class="form-control" id="" name="last_name" placeholder="Enter name" required>
@@ -297,6 +301,11 @@ table.dataTable{ font-size: 15px !important; }
                         <label for="">First name: </label>
                         <input type="hidden" class="form-control"  name="student_id" placeholder="Enter name" v-model="studentToUpdate.student_id">
                         <input type="text" class="form-control" name="first_name" placeholder="Enter name" v-model="studentToUpdate.first_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Middle name: </label>
+                        <input type="hidden" class="form-control"  name="student_id" placeholder="Enter name" v-model="studentToUpdate.student_id">
+                        <input type="text" class="form-control" name="middle_name" placeholder="Enter name" v-model="studentToUpdate.middle_name">
                     </div>
 					<div class="form-group">
                         <label for="">Last name: </label>

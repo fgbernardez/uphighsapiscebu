@@ -56,7 +56,7 @@
               <?php if( $this->session->userdata("user_type") == "admin"){ ?>
                 <p>Click "Update Date" button to set the deadline date for submitting grade.</p>
               <?php } else { ?>
-                <p>Hello <span><?php echo $this->session->userdata("first_name")." ".$this->session->userdata("last_name") ?></span></p>
+                <p>Hello <span><?php echo $this->session->userdata("first_name")." ".$this->session->userdata("middle_name")." ". $this->session->userdata("last_name") ?></span></p>
               <?php } ?> 
             </div>
         </div>
