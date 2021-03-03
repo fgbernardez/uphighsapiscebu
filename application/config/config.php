@@ -26,7 +26,7 @@ date_default_timezone_set('Asia/Manila');
 */
 // $config['base_url'] = 'http://localhost/v2gradingsystem/';
 // $config['base_url'] = 'http://uphscebugradingsystem.com/v1/';
-$config['base_url'] = 'http://uphscebugradingsystem.com/';
+$config['base_url'] = 'https://uphighsapis.upcebu.edu.ph/'; 
 //$config['sirnandFB'] = 'https://www.facebook.com/nandbernz/';
 
 
