@@ -1,6 +1,5 @@
 
 <style>
-
     #modal-update-request  p{color: black; font-size: 14px; }
     #modal-update-request  p span{font-weight: 600; color: maroon;}
     .box-body > .table {
@@ -14,9 +13,7 @@
         color: #fff;
         border-color: #3c8dbc;
     }
-
 </style>
-
 
 <div id="admin_request_app">
 <div class="content-wrapper">
