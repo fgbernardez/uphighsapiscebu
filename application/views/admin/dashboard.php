@@ -7,8 +7,6 @@
   </style>
 
 
-
-
   <div id="dashboard-app">
   <div class="content-wrapper">
     <!-- Main content -->
