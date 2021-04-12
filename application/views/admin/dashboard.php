@@ -1,5 +1,4 @@
-
-  <!-- Content Wrapper. Contains page content -->
+ <!-- Content Wrapper. Contains page content -->
 <style>
   .box.box-solid > .box-header .btn:hover, .box.box-solid > .box-header a:hover{ background: #0c4324; }
   </style>
@@ -61,7 +60,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
 <div class="modal fade" id="modal-default">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -105,7 +103,6 @@
                     <option value="4">Fourth Grading</option>
                   </select>
                 </div>
-
                 <div class="form-group">
                   <label>School Year</label>
                   <select class="form-control select2" style="width: 100%;" name="sy_id">
