@@ -1,12 +1,8 @@
 
   <!-- Content Wrapper. Contains page content -->
-
-
 <style>
   .box.box-solid > .box-header .btn:hover, .box.box-solid > .box-header a:hover{ background: #0c4324; }
   </style>
-
-
   <div id="dashboard-app">
   <div class="content-wrapper">
     <!-- Main content -->
