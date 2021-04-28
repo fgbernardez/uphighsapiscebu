@@ -37,14 +37,14 @@
 #attendance table tr td{text-transform: unset;}
 .box-sidebar ul li a.active{ background: #751517;color: white; }
 .view_student .header_view img.comp_logo {margin-bottom: 5px !important}
-.view_student .header_view p{color: #751517 !important; text-align: center; margin: 0 0 0px !important; font-size: 13px !important;}
+.view_student .header_view p{color: #751517 !important; text-align: center; margin: 0 0 0px !important; font-size: 15px !important;}
 .header_view .hdr_content{ position: relative; width: 400px; margin: 0 auto; padding-left: 82px;float: left;}
 .view_student .header_view figure { position: absolute; left: 10px; top: -5px; }
 .view_student .data_left{ float: left !important; }
 .view_student .data_right{ float: right !important;}
 .std-rp{margin-top: -65px;}
 .box-sidebar ul.student-list { padding: 10px 5px; height: 400px; display: block; overflow-y: auto; }
-.h2-header{text-align: center; font-size: 16px; padding: 10px 0px; background: #222d32; color: white; font-weight: 600; margin-bottom: 15px;}
+.h2-header{text-align: center; font-size: 18px; padding: 10px 0px; background: #222d32; color: white; font-weight: 600; margin-bottom: 15px;}
 #attendance tr td, #attendance tr th{text-align: center;}
 #attendance .month { background: #222d32; color: white; text-align: center; }
 #attendance .month.active { background: #751517; }
@@ -71,7 +71,7 @@
         margin-top: -755px !important;
     }
 
-    #printSudent{ font-size: 11px !important; }
+    #printSudent{ font-size: 13px !important; }
     /* .sample{
         position: absolute;
         left: 0px;
@@ -89,7 +89,7 @@
     .view_student .content_view { margin-top: -30px !important; }
     
     .view_student .header_view img.comp_logo {margin-bottom: 5px !important}
-    .view_student .header_view p{color: #751517 !important; text-align: center; margin: 0 0 0px !important; font-size: 13px !important;}
+    .view_student .header_view p{color: #751517 !important; text-align: center; margin: 0 0 0px !important; font-size: 15px !important;}
     .header_view .hdr_content{ position: relative; width: 400px; margin: 0 auto; padding-left: 82px; float: left;}
     .view_student .header_view figure{ position: absolute; left: 35px; top: -5px;}
     .view_student .data_left{ float: left !important; }
@@ -106,16 +106,16 @@
 		width: 150px;
 	}
     
-    .view_student .content_view .content_view_title { font-weight: 600; text-align: center; text-transform: uppercase; font-size: 12px !important; color: #751517 !important; margin-top: 0px; margin-bottom: 2px;}
-    .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th{ padding: 0px !important;font-size: 12px !important; }
+    .view_student .content_view .content_view_title { font-weight: 600; text-align: center; text-transform: uppercase; font-size: 14px !important; color: #751517 !important; margin-top: 0px; margin-bottom: 2px;}
+    .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th{ padding: 0px !important;font-size: 14px !important; }
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ border: none !important; text-align: center !important;  }
     .view_student .content_view table tr th:first-child, .view_student .content_view table tr td:first-child{ width: 200px !important; text-align: left !important;}
     footer {page-break-after: always !important;}
-    .behavior, .grades{width: 49% !important;}
+    .behavior, .grades{width: 59% !important;}
     .view_student .content_view p{margin: 0 0 3px !important;}
-    .ftr_content_view h4{ font-weight: 600; color: #751517 !important; text-align: center; font-size: 12px !important; }
+    .ftr_content_view h4{ font-weight: 600; color: #751517 !important; text-align: center; font-size: 14px !important; }
     .ftr_content_view p span{ text-decoration: underline; }
-    .ftr_content_view p small{ display: block; margin-right: 35px;color: #751517;}
+    .ftr_content_view p small{ display: block;color: #751517;}
     .ftr_content_view .data_right{ text-align: right; }
     #attendance table tr th:last-child, #attendance table tr td:last-child{ display: none !important; }
     .grades table tr th:last-child, .grades table tr td:last-child{ display: none !important; }
@@ -251,7 +251,7 @@
                                                     <th>1ST</th>
                                                     <th>2ND</th>
                                                     <th>3RD</th>
-                                                    <th>4TH</th>
+                                                    <th>4TH </th>
                                                     <th></th>
                                                 </tr>
                                                 <!-- <?php foreach( $student_grades["subject_grade"] as $sbj_grade ){ ?>
@@ -284,7 +284,7 @@
                                                             <td <?php if($sbj_grade["quarter_first"] < 75 && $sbj_grade["quarter_first"] > 0){echo 'style="color: #751517 !important;"';} ?>>
                                                                 <?php echo $sbj_grade["quarter_first"]; ?>
                                                             </td>
-                                                            <td <?php if($sbj_grade["quarter_second"] < 75 && $sbj_grade["quarter_second"] > 0){echo 'style="color: #751517;"';} ?>>
+                                                            <td <?php if($sbj_grade["quarter_second"] < 75 && $sbj_grade["quarter_second"] > 0){echo 'style="color: #751517 !important;"';} ?>>
                                                                 <?php echo $sbj_grade["quarter_second"]; ?>
                                                             </td>
                                                             <td> </td>
@@ -326,19 +326,33 @@
                                                 </tr> -->
                                                 <tr>
                                                     <td style="font-weight: 600; color: #751517 !important;">Average</td>
-                                                    <td style="font-weight: 600; color: #751517 !important;"><?php echo $student_grades["total_avg_first"]; ?></td>
-                                                    <td style="font-weight: 600; color: #751517 !important;"><?php echo $student_grades["total_avg_second"]; ?></td>
+                                                    <td style="font-weight: 600; color: #751517 !important;"><?php echo $student_grades["total_avg_first"]; ?> </td>
+                                                    <td style="font-weight: 600; color: #751517 !important;"><?php echo $student_grades["total_avg_second"]; ?> </td>
                                                     <td style="font-weight: 600; color: #751517 !important;"><?php echo $student_grades["total_avg_third"]; ?></td>
                                                     <td style="font-weight: 600; color: #751517 !important;"><?php echo $student_grades["total_avg_fourth"]; ?></td>
                                                     <!-- <td><button class="btn btn-warning" @click="averageModal()"><span class="fa fa-pencil"></span></button></td> -->
                                                     <td></td>
                                                 </tr>
-                                                <tr v-if="grade_average">
+                                                 <!--<tr v-if="grade_average">
                                                     <td style="font-weight: 600; color: #751517 !important;">GENERAL WEIGHTED AVERAGE</td>
                                                     <td colspan="4" style="text-align: center;color: #751517 !important;font-weight: 600;"><?php echo $student_grades["total_general_avg"]; ?></td>
                                                     <td></td>
+                                                </tr>--> 
+                                               <!-- <tr v-if="grade_average">
+                                                    <td style="font-weight: 600; color: #751517 !important;"> GENERAL WEIGHTED AVERAGE <?php if ($grade_level == "grade-7" && $grade_level == "grade-8" && $grade_level == "grade-9" && $grade_level == "grade-10") {echo '<td colspan="4" style="text-align: center;color: #751517 !important;font-weight: 600;"><?php echo $student_grades["total_general_avg"]; ?></td>';} ?> </td>
+                                                    <td style="font-weight: 600; color: #751517 !important;"> <?php if ($grade_level == "grade-11" && $grade_level == "grade-12" ) {echo '<td colspan="4" style="text-align: center;color: #751517 !important;font-weight: 600;"></td>';} ?> </td>
+                                                    <td></td> -->
+                                                <tr v-if="grade_average">
+                                                    <?php if($grade_level == 'grade-11' || $grade_level == 'grade-12'): ?>
+                                                        <td style="font-weight: 600; color: #751517 !important;"></td>
+                                                        <td colspan="4" style="text-align: center;color: #751517 !important;font-weight: 600;"></td>
+                                                        <td></td>
+                                                    <?php else: ?>
+                                                        <td style="font-weight: 600; color: #751517 !important;">GENERAL WEIGHTED AVERAGE</td>
+                                                        <td colspan="4" style="text-align: center;color: #751517 !important;font-weight: 600;"><?php echo $student_grades["total_general_avg"]; ?></td>
+                                                        <td></td>
+                                                    <?php endif; ?>
                                                 </tr>
-                                            
                                             </tbody>
                                         </table>
                                         </div>
@@ -360,7 +374,8 @@
                                                         <th>1ST</th>
                                                         <th>2ND</th>
                                                         <th>3RD</th>
-                                                        <th>4TH</th>
+                                                        <th>4TH </th>
+						                                <th></th>
                                                     </tr>
                                                     <tr>
                                                         <td>Manners</td>
@@ -415,7 +430,8 @@
                                                         <th>1ST</th>
                                                         <th>2ND</th>
                                                         <th>3RD</th>
-                                                        <th>4TH</th>
+                                                        <th>4TH </th>
+						                                <th> </th>
                                                     </tr>
                                                     <tr>
                                                         <td>Initiative & Resourcefulness</td>
@@ -442,7 +458,7 @@
                                                 </tbody>
                                             </table>
                                             <div class="legend">
-                                                <h4 class="content_view_title" style="text-align: left; text-transform: capitalize;font-size: 13px;">Legend</h4>
+                                                <h4 class="content_view_title" style="text-align: left; text-transform: capitalize;font-size: 15px;">Legend</h4>
                                                 <p>1.00 - 1.50 - Outstanding (O)</p>
                                                 <p>1.51 - 2.50 - Very Satisfactory (VS)</p>
                                                 <p>2.51 - 3.50 - Satisfactory (S)</p>
@@ -513,7 +529,7 @@
                                                         <td v-if="monthsClass.april == 1">{{ present_days.april }}</td>
                                                         <td v-if="monthsClass.may == 1">{{ present_days.may }}</td>
                                                         <td v-if="monthsClass.june == 1">{{ present_days.june }}</td>
-                                                        <td v-if="monthsClass.july == 1">{{ present_days.july }}</td>
+                                                         <td v-if="monthsClass.july == 1">{{ present_days.july }}</td>
                                                         <td v-if="monthsClass.august == 1">{{ present_days.august }}</td>
                                                         <td v-if="monthsClass.september == 1">{{ present_days.september }}</td>
 														<td>{{ present_days.total }}</td>
@@ -597,22 +613,19 @@
                         <div class="data_left">
                             <p style="margin-top: 10px;">Eligible for admission/transfer to ______________________</p>
 							<p style="margin-top: 10px;">Lacks credit/s in ______________________</p>
+                            <p style="margin-top: 10px;">Date issued: <span style="font-weight: 600; color: #751517 !important;"><?php echo date('m/d/Y'); ?></p>
                         </div>
 						<div class="data_center">
 							<p style="margin-top: 10px;">Parent's Signature:________________________</p>
-							<p style="margin-top: 10px;">Date issued: <span style="font-weight: 600; color: #751517 !important;"><?php echo date('m/d/Y'); ?></p>
-						</div>
-						<div class="data_right" style="margin-top: 10px;">
-							<p><span style="font-weight: 600; color: #751517 !important; text-transform: uppercase;"> <?php echo $principalData["first_name"] . ' '.$principalData["last_name"]; ?></span> <small style = "font-weight: 500;">Principal</small> </p>
+							<br/>
+							<p><span style="font-weight: 600; color: #751517 !important; text-transform: uppercase;"> <?php echo $principalData["first_name"] . ' '.$principalData["last_name"]; ?></span> <small style = "font-weight: 500;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Principal</small> </p> </p>
 						</div>
 						<div class="data_left">
-						<p style="margin-top: 1opx; font-weight: 500; color: #751517 !important;"> <img src="http://uphscebugradingsystem.com/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
+						<p style="margin-top: 1opx; font-weight: 500; color: #751517 !important;"> <img src="https://sapis.upcebu.edu.ph/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
                         </div>
                     </div>
                 </div>
 </section>
-
-
 
 <!-- AVERAGE MODAL -->
         <div class="modal fade" id="modal-average">
