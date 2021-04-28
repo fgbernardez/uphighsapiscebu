@@ -93,7 +93,7 @@ if (isset($attCal) && $attCal){
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ border: none ; text-align: center ;  }
     .view_student .content_view table tr th:first-child, .view_student .content_view table tr td:first-child{ width: 200px ; text-align: left ;}
     footer {page-break-after: always ;}
-    .behavior, .grades{width: 49% ;}
+    .behavior, .grades{width: 59% ;}
     .view_student .content_view p{margin: 0 0 3px ;}
     .ftr_content_view h4{ font-weight: 600; color: #751517 ; text-align: center; font-size: 12px ; }
     .ftr_content_view p span{ text-decoration: underline; }
@@ -121,31 +121,32 @@ if (isset($attCal) && $attCal){
     } 
     /* adjusting position that always start from top left*/
     .printSudent{
-        margin-top: 100px !important;
+        margin-top: 20px !important;
         /* border: 1px solid red; */
-        height: 630px !important;
+        height: 950px !important;
+        font-size: 11px !important;
         page-break-after: always;
-        
+        margin-top: 20px !important;
     }
 
-    .printSudent{ font-size: 11px !important; }
+    /*.printSudent{  page-break-after: always; } */
     /* .sample{
         position: absolute;
         left: 0px;
         right: 0px;
     } */
     .failed-grade{color: #751517 !important;}
-    .box-header{ padding: 0px !important; } .box{ margin-bottom: 10px; }
+    .box-header{ padding: 0px !important; } .box{ margin-bottom: 40px; }
     /* .break_new_page{page-break-after: always;} */
     .view_student .content_view p{ margin: 0 0 0px !important}
     .view_student .content_view p span{ color: #751517 !important;  }
-    .hdr_content .comp_logo{ width: 60px !important; }
+    .hdr_content .comp_logo{ width: 80px !important; }
     .ftr_content_view{display: block !important;}
     /* .view_student .header_view{ margin-top: 40px; } */
     /* .view_student .content_view { margin-top: -30px !important; } */
-    .student-data{margin-top: 0px !important;}
+    .student-data{margin-top: 40px !important;}
     
-    .view_student .header_view img.comp_logo {margin-bottom: 5px !important}
+    .view_student .header_view img.comp_logo {margin-bottom: 0 0 0px !important}
     .view_student .header_view p{color: #751517 !important; text-align: center; margin: 0 0 0px !important; font-size: 13px !important;}
     .view_student .header_view .hdr_content{ position: absolute; width: 400px; margin: 0 auto; padding-left: 82px;}
     .view_student .header_view figure{ position: absolute; left: 35px; top: -5px;}
@@ -168,7 +169,7 @@ if (isset($attCal) && $attCal){
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ border: none !important; text-align: center !important;  }
     .view_student .content_view table tr th:first-child, .view_student .content_view table tr td:first-child{ width: 200px !important; text-align: left !important;}
      footer {page-break-after: always !important;}
-    .behavior, .grades{width: 49% !important;}
+    .behavior, .grades{width: 59% !important;}
     .view_student .content_view p{margin: 0 0 3px !important;}
     .ftr_content_view h4{ font-weight: 600; color: #751517 !important; text-align: center; font-size: 12px !important; }
     .ftr_content_view p span{ text-decoration: underline; }
@@ -234,7 +235,7 @@ if (isset($attCal) && $attCal){
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ border: none !important; text-align: center !important;  }
     .view_student .content_view table tr th:first-child, .view_student .content_view table tr td:first-child{ width: 200px !important; text-align: left !important;}
     footer {page-break-after: always !important;}
-    .behavior, .grades{width: 49% !important;}
+    .behavior, .grades{width: 59% !important;}
     .view_student .content_view p{margin: 0 0 3px !important;}
     .ftr_content_view h4{ font-weight: 600; color: #751517 !important; text-align: center; font-size: 12px !important; }
     .ftr_content_view p span{ text-decoration: underline; }
@@ -321,7 +322,7 @@ if (isset($attCal) && $attCal){
                                                     <td <?php if($sbj_grade["quarter_first"] < 75 && $sbj_grade["quarter_first"] > 0){echo 'style="color: #751517 !important;"';} ?>>
                                                         <?php echo $sbj_grade["quarter_first"]; ?>
                                                     </td>
-                                                    <td <?php if($sbj_grade["quarter_second"] < 75 && $sbj_grade["quarter_second"] > 0){echo 'style="color: #751517;"';} ?>>
+                                                    <td <?php if($sbj_grade["quarter_second"] < 75 && $sbj_grade["quarter_second"] > 0){echo 'style="color: #751517; !important;"';} ?>>
                                                         <?php echo $sbj_grade["quarter_second"]; ?>
                                                     </td>
                                                     <td> </td>
@@ -360,13 +361,17 @@ if (isset($attCal) && $attCal){
                                             <td style="font-weight: 600; color: #751517 !important;"><?php echo $std["grades"]["total_avg_fourth"]; ?></td>
                                             <td></td>
                                         </tr>
-
-                                        <tr>
-                                            <td style="font-weight: 600; color: #751517 !important;">GENERAL WEIGHTED AVERAGE</td>
-                                            <td colspan="4" style="text-align: center;color: #751517 !important;font-weight: 600;"><?php echo $std["grades"]["total_general_avg"]; ?></td>
-                                            <td></td>
-                                        </tr>
-                                        
+                                        <tr v-if="grade_average">
+                                                    <?php if($grade_level == 'grade-11' || $grade_level == 'grade-12'): ?>
+                                                        <td style="font-weight: 600; color: #751517 !important;"></td>
+                                                        <td colspan="4" style="text-align: center;color: #751517 !important;font-weight: 600;"></td>
+                                                        <td></td>
+                                                    <?php else: ?>
+                                                        <td style="font-weight: 600; color: #751517 !important;">GENERAL WEIGHTED AVERAGE</td>
+                                                        <td colspan="4" style="text-align: center;color: #751517 !important;font-weight: 600;"><?php echo $std["grades"]["total_general_avg"]; ?></td>
+                                                        <td></td>
+                                                    <?php endif; ?>
+                                        </tr>  
                                     </tbody>
                                 </table>
                                 </div>
@@ -593,7 +598,7 @@ if (isset($attCal) && $attCal){
                             </tr>
                             <tr>
                                 <td colspan = "3" rowspan="5">
-                                    <p style="margin-top: -10px; font-weight: 500; color: #751517 !important; font-size:11px;"> <img src="http://uphscebugradingsystem.com/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
+                                    <p style="margin-top: -10px; font-weight: 500; color: #751517 !important; font-size:11px;"> <img src="https://sapis.upcebu.edu.ph/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
                                 </td>
                             </tr>
                         </table>
@@ -610,7 +615,7 @@ if (isset($attCal) && $attCal){
 							<p><span style="font-weight: 600; color: #751517 !important; text-transform: uppercase;"> <?php echo $principalData["first_name"] . ' '.$principalData["last_name"]; ?></span> <small style = "font-weight: 500;">Principal</small> </p>
 						</div>
 						<div class = "data_left">
-    						<p style="margin-top: -10px; font-weight: 500; color: #751517 !important; font-size:11px;"> <img src="http://uphscebugradingsystem.com/assets/custom/images/Digital_Final.png" style="width:25px;width:25px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
+    						<p style="margin-top: -10px; font-weight: 500; color: #751517 !important; font-size:11px;"> <img src="https://sapis.upcebu.edu.ph/assets/custom/images/Digital_Final.png" style="width:25px;width:25px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
                         </div>
                         --> 
                     </div>
@@ -630,7 +635,7 @@ if (isset($attCal) && $attCal){
 							<p><span style="font-weight: 600; color: #751517 !important; text-transform: uppercase;"> <?php echo $principalData["first_name"] . ' '.$principalData["last_name"]; ?></span> <small style = "font-weight: 500;">Principal</small> </p>
 						</div>
 						<div class="data_left">
-    						<p style="margin-top: 10px; font-weight: 500; color: #751517 !important;"> <img src="http://uphscebugradingsystem.com/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
+    						<p style="margin-top: 10px; font-weight: 500; color: #751517 !important;"> <img src="https://sapis.upcebu.edu.ph/assets/custom/images/Digital_Final.png" style="width:50px;width:50px;"> This is a digitally-generated file. The digital signature of the Principal authenticates this document.</p>
                         </div>
                     </div>
                 </div> -->
