@@ -391,6 +391,7 @@ class GradeModel extends CI_Model{
         $credit_unit3 = 0;
         $credit_unit4 = 0;
 		$total_general_avg = 0;
+        
 		
 		$subjectFailedgrades = array();
 		$display_fail = 0;
