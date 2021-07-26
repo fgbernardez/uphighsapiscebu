@@ -8,7 +8,7 @@
 		?>
 			<div class="alert alert-warning alert-dismissible">
 				<h4><i class="icon fa fa-warning"></i>Warning!</h4>
-				<?php echo 'Please submit the '.$gradings[$deadlineForSubmitGrade['grading']].' grade before '.$deadlineForSubmitGrade['time_deadline'].' '.$deadlineForSubmitGrade['date_deadline'].'!'; ?>
+				<?php echo 'Please submit the '.$gradings[$deadlineForSubmitGrade['grading']].' grade before '.$deadlineForSubmitGrade['date_deadline'].' '.$deadlineForSubmitGrade['time_deadline'].'!'; ?>
 			</div>
 		<?php endif; ?>
     </section>

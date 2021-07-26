@@ -33,8 +33,8 @@ date_default_timezone_set('Asia/Manila');
 
 $dead = $deadline["date_deadline"] . " " . $deadline["time_deadline"];
 $date = date_create($dead);
-$deadline_date  = date_format($date,"Y/m/d h:i:s");
-$current_date = date("Y/m/d h:i:s");
+$deadline_date  = date_format($date,"Y/m/d h:i:s A");
+$current_date = date("Y/m/d h:i:s A");
 // echo "Deadline date => " . $deadline_date ."<br>";
 // echo "Current date => " . $current_date ."<br>";
 // echo date_format($date,"Y/m/d H:i:s");
@@ -47,7 +47,7 @@ $edit_grading = 0;
 if(  $request_edit != null ){
     if( $request_edit[0]["req_status"] == "Accepted" ){
         $d_date = date_create($request_edit[0]["deadline_date"]);
-        $req_deadline_date  = date_format($d_date,"Y/m/d h:i:s");
+        $req_deadline_date  = date_format($d_date,"Y/m/d h:i:s A");
         if( $current_date <= $req_deadline_date ){
             $req_edit = true;
             $edit_grading = $request_edit[0]["grading"];
@@ -177,7 +177,7 @@ if ($this->session->userdata("active") == 1){
 			?>
 				<div class="alert alert-warning alert-dismissible">
 					<h4><i class="icon fa fa-warning"></i>Warning!</h4>
-					<?php echo 'Please submit the '.$gradings[$deadlineForSubmitGrade['grading']].' grade before '.$deadlineForSubmitGrade['time_deadline'].' '.$deadlineForSubmitGrade['date_deadline'].'!'; ?>
+					<?php echo 'Please submit the '.$gradings[$deadlineForSubmitGrade['grading']].' grade before '.$deadlineForSubmitGrade['date_deadline'].' '.$deadlineForSubmitGrade['time_deadline'].'!'; ?>
 				</div>
 			<?php endif; ?>
 		</section>

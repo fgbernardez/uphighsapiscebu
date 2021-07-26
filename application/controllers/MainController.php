@@ -66,7 +66,6 @@ class MainController extends CI_Controller {
                 redirect("/");
             }
         }
-
         $this->template->loginTemplate();
     }
 

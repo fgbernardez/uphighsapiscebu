@@ -26,7 +26,7 @@ date_default_timezone_set('Asia/Manila');
 */
 // $config['base_url'] = 'http://localhost/v2gradingsystem/';
 // $config['base_url'] = 'http://uphscebugradingsystem.com/v1/';
-$config['base_url'] = 'https://uphighsapis.upcebu.edu.ph/'; 
+$config['base_url'] = 'https://sapis.upcebu.edu.ph/'; 
 //$config['sirnandFB'] = 'https://www.facebook.com/nandbernz/';
 
 
@@ -386,7 +386,9 @@ $config['encryption_key'] = '';
 */
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
-$config['sess_expiration'] = 7200;
+//$config['sess_expiration'] = 7200;
+//$config['sess_save_path'] = NULL;
+$config['sess_expiration'] = 0; 
 $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;

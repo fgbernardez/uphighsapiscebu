@@ -103,6 +103,7 @@
                                                 <tr>
                                                     <th>Name</th>
                                                     <th>Ranking</th>
+                                                    <th>Average</th>
                                                 </tr>
 
                                                     <?php 
@@ -113,6 +114,7 @@
                                                                 <tr>
                                                                     <td><?php echo $std["first_name"] .' '.$std["last_name"]; ?></td>
                                                                     <td><?php echo $std["rank"]; ?></td>
+                                                                    <td><?php echo $std["grades"][$average_period]; ?></td>
                                                                 </tr>
                                                     <?php
                                                                 }
@@ -137,6 +139,7 @@
                                                 <tr>
                                                     <th>Name</th>
                                                     <th>Ranking</th>
+                                                    <th>Average</th>
                                                 </tr>
                                                 <?php 
                                                     if (isset($grade8Students) && $grade8Students != null) {
@@ -146,6 +149,7 @@
                                                             <tr>
                                                                 <td><?php echo $std["first_name"] .' '.$std["last_name"]; ?></td>
                                                                 <td><?php echo $std["rank"]; ?></td>
+                                                                <td><?php echo $std["grades"][$average_period]; ?></td>
                                                             </tr>
                                                 <?php
                                                             }
@@ -171,6 +175,7 @@
                                                 <tr>
                                                     <th>Name</th>
                                                     <th>Ranking</th>
+                                                    <th>Average</th>
                                                 </tr>
                                                 <?php 
                                                     if (isset($grade9Students) && $grade9Students != null) {
@@ -180,6 +185,7 @@
                                                             <tr>
                                                                 <td><?php echo $std["first_name"] .' '.$std["last_name"]; ?></td>
                                                                 <td><?php echo $std["rank"]; ?></td>
+                                                                <td><?php echo $std["grades"][$average_period]; ?></td>
                                                             </tr>
                                                 <?php
                                                             }
@@ -205,6 +211,7 @@
                                                 <tr>
                                                     <th>Name</th>
                                                     <th>Ranking</th>
+                                                    <th>Average</th>
                                                 </tr>
                                                 <?php 
                                                     if (isset($grade10Students) && $grade10Students != null) {
@@ -214,6 +221,7 @@
                                                             <tr>
                                                                 <td><?php echo $std["first_name"] .' '.$std["last_name"]; ?></td>
                                                                 <td><?php echo $std["rank"]; ?></td>
+                                                                <td><?php echo $std["grades"][$average_period]; ?></td>
                                                             </tr>
                                                 <?php
                                                             }
@@ -239,6 +247,7 @@
                                                 <tr>
                                                     <th>Name</th>
                                                     <th>Ranking</th>
+                                                    <th>Average</th>
                                                 </tr>
                                                 <?php 
                                                     if (isset($grade11Students) && $grade11Students != null) {
@@ -248,6 +257,7 @@
                                                             <tr>
                                                                 <td><?php echo $std["first_name"] .' '.$std["last_name"]; ?></td>
                                                                 <td><?php echo $std["rank"]; ?></td>
+                                                                <td><?php echo $std["grades"][$average_period]; ?></td>
                                                             </tr>
                                                 <?php
                                                             }
@@ -273,6 +283,7 @@
                                                 <tr>
                                                     <th>Name</th>
                                                     <th>Ranking</th>
+                                                    <th>Average</th>
                                                 </tr>
                                                 <?php 
                                                     if (isset($grade12Students) && $grade12Students != null) {
@@ -282,6 +293,7 @@
                                                             <tr>
                                                                 <td><?php echo $std["first_name"] .' '.$std["last_name"]; ?></td>
                                                                 <td><?php echo $std["rank"]; ?></td>
+                                                                <td><?php echo $std["grades"][$average_period]; ?></td>
                                                             </tr>
                                                 <?php
                                                             }

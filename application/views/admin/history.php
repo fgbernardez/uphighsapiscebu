@@ -37,15 +37,17 @@
                     <tbody>
                         <tr>
                             <th>Description</th>
-                            <th>Date Time</th>
+                            <th>Date and Time</th>
                         </tr>
 
                         <?php
-                            foreach( $histories->result() as $his ){
+                        date_default_timezone_set('Asia/Manila');
+                            
+                        foreach( $histories->result() as $his ){
                                 $date = new DateTime($his->date_created);
                                 echo "<tr>";
                                     echo "<td>" . $his->description . '</td>';
-                                    echo "<td>" . $date->format('F d, Y h:i:s a') . '</td>';
+                                    echo "<td>" . $date->format('F d Y, h:i:s A') . '</td>';
                                 echo "<tr>";
                             }
                         ?>

@@ -54,10 +54,7 @@ if (isset($attCal) && $attCal){
 
 ?>
 
-
 <style>
-
-
 .ftr_content_view .data_left, .ftr_content_view .data_center, .ftr_content_view .data_right{
 	display: inline-block;
 	vertical-align: top;
@@ -71,23 +68,23 @@ if (isset($attCal) && $attCal){
 #attendance table tr td{text-transform: unset;}
 .box-header > .box-tools{z-index: 999;  }
 
-    .box-header{ padding: 0px ; }
+    .box-header{ padding: 0px !important; }
     .box{ margin-bottom: 10px; }
     .view_student{ width: 1000px; max-width: 100%; margin: 0 auto; padding-top: 20px;}
     .view_student .content_view p{ margin: 0 0 -4px}
-    .view_student .content_view p span{ color: #751517;  }
+    .view_student .content_view p span{ color: #751517; font-size: 11px; }
     .hdr_content .comp_logo{ width: 60px !important; }
     .ftr_content_view{display: block ;}
     /* .view_student .header_view{ margin-top: 40px; } */
     /* .view_student .content_view { margin-top: -30px; } */
     .student-data{margin-top: -22px;}
-    .view_student .header_view img.comp_logo {margin-bottom: 5px}
+    .view_student .header_view img.comp_logo {margin-bottom: 5px !important}
     .view_student .header_view p{color: #751517 ; text-align: center; margin: 0 0 -4px; font-size: 13px;}
     /* .view_student .header_view .hdr_content{ position: relative; width: 400px; margin: 0 auto; padding-left: 82px;} */
     .view_student .header_view .hdr_content{ position: absolute; width: 400px;padding-left: 20px; float: left;}
     .view_student .header_view figure{ position: absolute; left: 15px; top: -5px;}
-    .view_student .data_left{ float: left ; }
-    .view_student .data_right{ float: right ;}
+    .view_student .data_left{ float: left !important; }
+    .view_student .data_right{ float: right !important;}
     .view_student .content_view .content_view_title { font-weight: 600; text-align: center; text-transform: uppercase; font-size: 12px ; color: #751517 ; margin-top: 0px; margin-bottom: 2px;}
     .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th{ padding: 0px ;font-size: 12px ; }
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ border: none ; text-align: center ;  }
@@ -126,7 +123,6 @@ if (isset($attCal) && $attCal){
         height: 950px !important;
         font-size: 11px !important;
         page-break-after: always;
-        margin-top: 20px !important;
     }
 
     /*.printSudent{  page-break-after: always; } */
@@ -136,7 +132,8 @@ if (isset($attCal) && $attCal){
         right: 0px;
     } */
     .failed-grade{color: #751517 !important;}
-    .box-header{ padding: 0px !important; } .box{ margin-bottom: 40px; }
+    .box-header{ padding: 0px !important; } 
+    .box{ margin-bottom: 60px; }
     /* .break_new_page{page-break-after: always;} */
     .view_student .content_view p{ margin: 0 0 0px !important}
     .view_student .content_view p span{ color: #751517 !important;  }
@@ -147,10 +144,9 @@ if (isset($attCal) && $attCal){
     .student-data{margin-top: 40px !important;}
     
     .view_student .header_view img.comp_logo {margin-bottom: 0 0 0px !important}
-    .view_student .header_view p{color: #751517 !important; text-align: center; margin: 0 0 0px !important; font-size: 13px !important;}
-    .view_student .header_view .hdr_content{ position: absolute; width: 400px; margin: 0 auto; padding-left: 82px;}
-    .view_student .header_view figure{ position: absolute; left: 35px; top: -5px;}
-
+    .view_student .header_view p{color: #751517 !important; text-align: center; margin: 0 0 0px !important; font-size: 15px !important;}
+    .view_student .header_view .hdr_content{ position: relative; width: 400px; margin: 0 auto; padding-left: 82px;float: left;}
+    .view_student .header_view figure{ position: absolute; left: 10px; top: -5px;}
 
 	.ftr_content_view .data_left, .ftr_content_view .data_center, .ftr_content_view .data_right{
 		display: inline-block;
@@ -200,9 +196,9 @@ if (isset($attCal) && $attCal){
     } 
     /* adjusting position that always start from top left*/
     .printSudent{
-        margin-top: 20px !important;
+        margin-top: 10px !important;
         /* border: 1px solid red; */
-        height: 630px !important;
+        height: 680px !important;
         
     }
 
@@ -273,7 +269,7 @@ if (isset($attCal) && $attCal){
                 <div class="header_view">
                     <div class="hdr_content">
                         <figure><img src="<?php echo base_url() ?>assets/custom/images/comp-logo.png" alt="Company Logo" class="comp_logo" style="width: 100px;max-width: 100%;"></figure>
-                        <p>University of the Philippines High School Cebu</p>
+                        <p>     University of the Philippines High School Cebu</p>
                         <p>Gorordo Avenue, Lahug, Cebu City</p>
                     <p>Tel #: (032) 232-8187 local 301</p>
                     </div>
