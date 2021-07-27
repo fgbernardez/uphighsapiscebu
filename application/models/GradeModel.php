@@ -452,10 +452,8 @@ class GradeModel extends CI_Model{
                 $grade_level_number = explode("-", $data["grade_level"]);
                 $sbj_name = strtolower($sbj['subject_name']);
                 if ($grade_level_number[1] == 9 || $grade_level_number[1] == 10) {
-                    if (strpos($sbj_name, 'elective') !== false) {
-                        $for_gwa_9_10_credit_units += 0.5;
-				        $for_gwa_9_10_grades += $sbj["quarter_second"] * 0.5;
-                    }
+                    $for_gwa_9_10_credit_units += $sbj["credit_unit"] / 2;
+                    $for_gwa_9_10_grades += $sbj["quarter_second"] * ($sbj["credit_unit"] / 2);
                 }
 
 				if($grade == null) {
@@ -483,12 +481,10 @@ class GradeModel extends CI_Model{
                 $grade_level_number = explode("-", $data["grade_level"]);
                 $sbj_name = strtolower($sbj['subject_name']);
                 if ($grade_level_number[1] == 9 || $grade_level_number[1] == 10) {
-                    if (strpos($sbj_name, 'elective') !== false) {
-                        $credit_unit4 += $sbj["credit_unit"];
-                        $fourth_grading_avg += $sbj["quarter_fourth"] * $sbj["credit_unit"];
-                        $for_gwa_9_10_credit_units += 0.5;
-				        $for_gwa_9_10_grades += $sbj["quarter_fourth"] * 0.5;
-                    }
+                    $credit_unit4 += $sbj["credit_unit"];
+                    $fourth_grading_avg += $sbj["quarter_fourth"] * $sbj["credit_unit"];
+                    $for_gwa_9_10_credit_units += $sbj["credit_unit"] / 2;
+                    $for_gwa_9_10_grades += $sbj["quarter_fourth"] * ($sbj["credit_unit"] / 2);
                 } else {
                     $credit_unit4 += $sbj["credit_unit"];
                     $fourth_grading_avg += $sbj["quarter_fourth"] * $sbj["credit_unit"];
