@@ -324,7 +324,7 @@ if ($this->session->userdata("active") == 1){
                                 </div>
 
 
-                                <!--div class="col col-md-12">
+                                <div class="col col-md-12">
                                     <h4 class="content_title">PERSONALITY AND CHARACTER EVALUATION RATING</h4>
                                     <table class="table table-striped" v-if="behaviorGrade">
                                         <tbody>
@@ -355,7 +355,7 @@ if ($this->session->userdata("active") == 1){
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div -->
+                                </div
                             </div>
                         </div>
                     </div>

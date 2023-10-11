@@ -18,118 +18,115 @@
 </style>
 
 
-<!--<div id="admin_request_app">-->
-<div class="content-wrapper">
-<!-- Main content -->
-<section class="content">
-        <!-- Default box -->
-        <div class="box box-solid">
-            <div class="box-body">
-                <div class="box box-maroon">
-                    <div class="box-header">
-                        <h3 class="box-title">All Request</h3>
+<div id="admin-request-app">
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+            <!-- Default box -->
+            <div class="box box-solid">
+                <div class="box-body">
+                    <div class="box box-maroon">
+                        <div class="box-header">
+                            <h3 class="box-title">All Request</h3>
 
-                        <!-- <div class="box-tools">
-                            <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
-                            <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+                            <!-- <div class="box-tools">
+                                <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
+                                <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                            </div>
-                            </div>
-                        </div> -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body table-responsive no-padding">
-                        
-
-                        <table class="table table-hover">
-                            <tbody>
-                                <tr>
-                                    <th>Requested By: </th>
-                                    <th>Student</th>
-                                    <th>Subject</th>
-                                    <th>Grade</th>
-                                    <th>School Year</th>
-                                    <th>Grading</th>
-                                    <th>Reason</th>
-                                    <th>Request Attempt</th>
-                                    <th>Status</th>
-                                    <th>Deadline Date</th>
-                                    <th>Requested Date</th>
-                                    <th></th>
-                                </tr>
-                                <?php foreach( $all_request->result() as $req ){ 
-                                    $req_date = new DateTime($req->requested_at);
-
-                                ?>
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body table-responsive no-padding">
+                            <table class="table table-hover">
+                                <tbody>
                                     <tr>
-                                        <td><?php echo $req->first_name ." " . $req->last_name; ?> </td>
-                                        <td> <a href="<?php echo base_url("admin/SY/" . $req->sy_id . "/" . $req->grade_level ."/" . $req->student_id ); ?>"><?php echo $req->std_first_name.' '.$req->std_last_name; ?></a> </td>
-                                        
-                                        <td><?php echo $req->subject_name; ?></td>
-                                        <td><?php echo $req->grade_level; ?></td>
-                                        <td><?php echo $req->start_year ." - ".$req->end_year; ?></td>
-                                        <td><?php echo $req->grading; ?></td>
-                                    
-                                        <td><span class="btn btn-info" @click="viewreason( '<?php echo $req->reason; ?>' )"> <i class=" fa fa-eye"></i></span> </td>
-                                        <td><?php echo $req->request_attempt; ?></td><td>
-                                        <span class="label
-                                            <?php 
-                                                if( $req->req_status == 'Pending' )
-                                                    { echo 'label-warning'; } 
-                                                else if( $req->req_status == 'Accepted' ){
-                                                    { echo 'label-success'; } 
-                                                } else {
-                                                    { echo 'label-danger'; } 
-                                                }
-                                            ?>">
-                                            <?php echo $req->req_status; ?></td>
-                                        </span>
-                                        <td><?php echo $req->deadline_date; ?></td>
-                                        <td>
-                                            <?php echo $req_date->format('F d, Y h:i:s a'); ?>
-                                        </td>
-                                        <?php if( $req->request_attempt > 3 && $this->session->userdata("user_type") == "superadmin" ){ ?>
+                                        <th>Requested By: </th>
+                                        <th>Student</th>
+                                        <th>Subject</th>
+                                        <th>Grade</th>
+                                        <th>School Year</th>
+                                        <th>Grading</th>
+                                        <th>Reason</th>
+                                        <th>Request Attempt</th>
+                                        <th>Status</th>
+                                        <th>Deadline Date</th>
+                                        <th>Requested Date</th>
+                                        <th></th>
+                                    </tr>
+                                    <?php foreach( $all_request->result() as $req ){ 
+                                        $req_date = new DateTime($req->requested_at);
+
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $req->first_name ." " . $req->last_name; ?> </td>
                                             <td>
-                                                <span class="btn btn-warning" @click="updateRequest( <?php echo $req->request_id; ?>, '<?php echo $req->req_status; ?>' )" > <i class="fa fa-pencil"></i> </span>
-                                                <span class="btn btn-maroon" @click="deleteRequest( <?php echo $req->request_id; ?> )"> <i class="fa fa-trash"></i> </span>
+                                                <a href="<?php echo base_url("admin/SY/" . $req->sy_id . "/" . $req->grade_level ."/" . $req->student_id ); ?>">
+                                                    <?php echo $req->std_first_name.' '.$req->std_last_name; ?>
+                                                </a>
                                             </td>
-                                        <?php } else if( $req->request_attempt <= 3 ) { ?>
-                                            <td>
-                                                <span class="btn btn-warning" @click="updateRequest( <?php echo $req->request_id; ?>, '<?php echo $req->req_status; ?>' )" > <i class="fa fa-pencil"></i> </span>
-                                                <span class="btn btn-maroon" @click="deleteRequest( <?php echo $req->request_id; ?> )"> <i class="fa fa-trash"></i> </span>
-                                            </td>
-                                        <?php } else { ?>
-                                            <td></td>
-                                        <?php }?>
+                                            
+                                            <td><?php echo $req->subject_name; ?></td>
+                                            <td><?php echo $req->grade_level; ?></td>
+                                            <td><?php echo $req->start_year ." - ".$req->end_year; ?></td>
+                                            <td><?php echo $req->grading; ?></td>
                                         
-                                    </tr> 
-                                <?php } ?>
-                                
-                            </tbody>
-                        </table>
-
-
+                                            <td><span class="btn btn-info" @click="viewreason( `<?php echo $req->reason; ?>` )"> <i class=" fa fa-eye"></i></span> </td>
+                                            <td><?php echo $req->request_attempt; ?></td>
+                                            <td>
+                                            <span class="label
+                                                <?php 
+                                                    if( $req->req_status == 'Pending' )
+                                                        { echo 'label-warning'; } 
+                                                    else if( $req->req_status == 'Accepted' ){
+                                                        { echo 'label-success'; } 
+                                                    } else {
+                                                        { echo 'label-danger'; } 
+                                                    }
+                                                ?>">
+                                                <?php echo $req->req_status; ?>
+                                            </span>
+                                            </td>
+                                            <td><?php echo $req->deadline_date; ?></td>
+                                            <td>
+                                                <?php echo $req_date->format('F d, Y h:i:s a'); ?>
+                                            </td>
+                                            <?php if( $req->request_attempt > 3 && $this->session->userdata("user_type") == "superadmin" ){ ?>
+                                                <td>
+                                                    <span class="btn btn-warning" @click="updateRequest( <?php echo $req->request_id; ?>, '<?php echo $req->req_status; ?>' )" > <i class="fa fa-pencil"></i> </span>
+                                                    <span class="btn btn-maroon" @click="deleteRequest( <?php echo $req->request_id; ?> )"> <i class="fa fa-trash"></i> </span>
+                                                </td>
+                                            <?php } else if( $req->request_attempt <= 3 ) { ?>
+                                                <td>
+                                                    <span class="btn btn-warning" @click="updateRequest( <?php echo $req->request_id; ?>, '<?php echo $req->req_status; ?>' )" > <i class="fa fa-pencil"></i> </span>
+                                                    <span class="btn btn-maroon" @click="deleteRequest( <?php echo $req->request_id; ?> )"> <i class="fa fa-trash"></i> </span>
+                                                </td>
+                                            <?php } else { ?>
+                                                <td></td>
+                                            <?php }?>
+                                            
+                                        </tr> 
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer clearfix">
+                            <ul class="pagination pagination-sm no-margin pull-right">
+                                <?php echo $this->pagination->create_links(); ?>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- /.box-body -->
-                    <!-- /.box-body -->
-
-                    
-                    <div class="box-footer clearfix">
-                        <ul class="pagination pagination-sm no-margin pull-right">
-                            <?php echo $this->pagination->create_links(); ?>
-                        </ul>
-                    </div>
-
                 </div>
+                <!-- /.box-body -->
             </div>
-        <!-- /.box-body -->
-        </div>
-        <!-- /.box -->
-</section>
-<!-- /.content -->
-</div>
+            <!-- /.box -->
+        </section>
+        <!-- /.content -->
+    </div>
 <!-- /.content-wrapper -->
 
 

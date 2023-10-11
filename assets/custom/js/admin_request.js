@@ -3,7 +3,7 @@ import { BASE_URL } from './constant.js';
 
 new Vue({
 
-    el: "#admin_request_app",
+    el: '#admin-request-app',
     data: {
         home_url: BASE_URL,
         // home_url: window.location.origin,

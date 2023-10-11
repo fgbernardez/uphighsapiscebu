@@ -186,8 +186,17 @@
                 <div class="box-body no-padding">
                     <h2 class="h2-header">STUDENTS</h2>
                     <ul class="student-list">
-                        <?php foreach( $students->result() as $std ){ ?>
-                            <li><a <?php if( $std->student_id == $student_data["student_id"] ) { echo 'class="active"'; } ?> href="<?php echo base_url("admin/SY/").$sy_id.'/'.$grade_level.'/'.$std->student_id; ?>"><?php echo $std->first_name.' '.$std->middle_name.' '.$std->last_name; ?></a></li>
+                        <?php 
+                            foreach( $students->result() as $std ){
+                                $fn = isset($std->first_name) ? $std->first_name : '';
+                                $mn = isset($std->middle_name) ? $std->middle_name : '';
+                                $ln = isset($std->last_name) ? $std->last_name : '';
+                            ?>
+                            <li>
+                                <a <?php if( $std->student_id == $student_data["student_id"] ) { echo 'class="active"'; } ?> href="<?php echo base_url("admin/SY/").$sy_id.'/'.$grade_level.'/'.$std->student_id; ?>">
+                                    <?php echo $fn.' '.$mn.' '.$ln; ?>
+                                </a>
+                            </li>
                         <?php } ?>
                     </ul>
                 </div>
