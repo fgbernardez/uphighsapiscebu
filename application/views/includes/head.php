@@ -29,11 +29,11 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/skins/_all-skins.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/custom/css/style.css">
 
+  <?php if( $this->uri->segment(2) != "view-students-grade" ){ ?>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-<script src="<?php echo base_url(); ?>assets/custom/js/vue.js"></script>
-
+  <script src="<?php echo base_url(); ?>assets/custom/js/vue.js"></script>
   <script src="<?php echo base_url(); ?>assets/custom/js/axios.min.js"></script>
-  
+  <?php } ?>
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>

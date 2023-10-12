@@ -290,7 +290,12 @@ if (isset($attCal) && $attCal){
                             <p>Student No: <span><?php echo $std["student_no"]; ?></span></p>
                         </div>
                         <div class="col col-md-6" style="display: inline-block;">
-                            <p>Name: <span><?php echo $std["first_name"].' '.$std["middle_name"].' '. $std["last_name"]; ?></span> </p>
+                            <p>Name: <span><?php
+                                $fn = !empty($std["first_name"]) ? $std["first_name"] : '';
+                                $mn = !empty($std["middle_name"]) ? $std["middle_name"] : '';
+                                $ln = !empty($std["last_name"]) ? $std["last_name"] : '';
+                                echo $fn.' '.$mn.' '. $ln; 
+                             ?></span> </p>
                         </div>
                         <div class="clearfix"></div>
 
