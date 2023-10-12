@@ -90,7 +90,7 @@ if (isset($attCal) && $attCal){
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ border: none ; text-align: center ;  }
     .view_student .content_view table tr th:first-child, .view_student .content_view table tr td:first-child{ width: 200px ; text-align: left ;}
     footer {page-break-after: always ;}
-    .behavior, .grades{width: 59% ;}
+    .behavior, .grades{width: 50% ;}
     .view_student .content_view p{margin: 0 0 3px ;}
     .ftr_content_view h4{ font-weight: 600; color: #751517 ; text-align: center; font-size: 12px ; }
     .ftr_content_view p span{ text-decoration: underline; }
@@ -102,6 +102,13 @@ if (isset($attCal) && $attCal){
     .legend h4{font-size: 12px;}
     .legend p{ margin: 0 0 0px ; color: #751517 ; font-size: 12px;}
 	#attendance .month-0{display: none;}
+
+    .ftr_view{
+        width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    }
 </style>
 
 <?php if( $grade_level == 'grade-11' || $grade_level == 'grade-12' ){ ?>
@@ -165,7 +172,7 @@ if (isset($attCal) && $attCal){
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ border: none !important; text-align: center !important;  }
     .view_student .content_view table tr th:first-child, .view_student .content_view table tr td:first-child{ width: 200px !important; text-align: left !important;}
      footer {page-break-after: always !important;}
-    .behavior, .grades{width: 59% !important;}
+    .behavior, .grades{width: 45% !important;}
     .view_student .content_view p{margin: 0 0 3px !important;}
     .ftr_content_view h4{ font-weight: 600; color: #751517 !important; text-align: center; font-size: 12px !important; }
     .ftr_content_view p span{ text-decoration: underline; }
@@ -231,7 +238,7 @@ if (isset($attCal) && $attCal){
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ border: none !important; text-align: center !important;  }
     .view_student .content_view table tr th:first-child, .view_student .content_view table tr td:first-child{ width: 200px !important; text-align: left !important;}
     footer {page-break-after: always !important;}
-    .behavior, .grades{width: 59% !important;}
+    .behavior, .grades{width: 45% !important;}
     .view_student .content_view p{margin: 0 0 3px !important;}
     .ftr_content_view h4{ font-weight: 600; color: #751517 !important; text-align: center; font-size: 12px !important; }
     .ftr_content_view p span{ text-decoration: underline; }
@@ -380,13 +387,13 @@ if (isset($attCal) && $attCal){
                             </div>
                         </div>
 
-                        <!--div class="col col-md-12 data_right behavior">
+                        <div class="col col-md-12 data_right behavior">
                             <div class="box box-solid">
                                 <div class="box-body table-responsive no-padding" v-if="behavior_first_grading">
                                     <table class="table table-hover">
                                         <tbody>
                                             <tr>
-                                                <th> </th>
+                                                <th>PCERS</th>
                                                 <th>1ST</th>
                                                 <th>2ND</th>
                                                 <th>3RD</th>
@@ -482,11 +489,9 @@ if (isset($attCal) && $attCal){
                                     </div>
                                 </div>
                             </div>
-                        </div -->
+                        </div
 
                         <div class="clearfix"></div>
-
-
                         <div class="col col-md-12">
                             <div class="box box-solid" id="attendance">
                                 <div class="box-header">
@@ -574,7 +579,8 @@ if (isset($attCal) && $attCal){
 
                     </div>
                 </div>
-            <div class="ftr_view">
+                <div class="clearfix"></div>
+                <div class="ftr_view">
                     <div class="ftr_content_view">
                         <h4>CERTIFICATE OF ADMISSION/TRANSFER</h4>
                         <table>
