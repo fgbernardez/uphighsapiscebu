@@ -33,7 +33,7 @@
     }
 ?>
 <style>
-.behavior{display: none;}
+/* .behavior{display: none;} */
 #attendance table tr td{text-transform: unset;}
 .box-sidebar ul li a.active{ background: #751517;color: white; }
 .view_student .header_view img.comp_logo {margin-bottom: 5px !important}
@@ -111,7 +111,7 @@
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{ border: none !important; text-align: center !important;  }
     .view_student .content_view table tr th:first-child, .view_student .content_view table tr td:first-child{ width: 200px !important; text-align: left !important;}
     footer {page-break-after: always !important;}
-    .behavior, .grades{width: 59% !important;}
+    .behavior, .grades{width: 49% !important;}
     .view_student .content_view p{margin: 0 0 3px !important;}
     .ftr_content_view h4{ font-weight: 600; color: #751517 !important; text-align: center; font-size: 14px !important; }
     .ftr_content_view p span{ text-decoration: underline; }
@@ -379,7 +379,7 @@
                                             <table class="table table-hover">
                                                 <tbody>
                                                     <tr>
-                                                        <th> </th>
+                                                        <th>PCERS</th>
                                                         <th>1ST</th>
                                                         <th>2ND</th>
                                                         <th>3RD</th>
